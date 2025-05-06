@@ -1,0 +1,68 @@
+body { 
+    margin: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f4f4; 
+    color: #222; 
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+    margin-right: 15px;
+    font-weight: 500;
+  }
+  
+.navbar .nav-link:hover {
+    color: #f4a300 !important;
+}
+
+.card{
+    background-color: #e96500 !important;
+}
+
+.card-text{
+    color: white;
+}
+
+.card-img-top{
+    height: 220px; 
+    object-fit: cover; 
+    border-radius: 5px 5px 0 0;
+}
+
+.footer { 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0;
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .ashok_chakra_logo {
+        max-height : 40px !important;
+        width: auto;
+    }
+    .amateur{
+        font-size: 14px;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 400px) {
+    .ashok_chakra_logo {
+        max-height : 20px !important;
+        width: auto;
+    }
+    .amateur{
+        font-size: 14px;
+    }
+    .deskki{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        font-size: 10px !important;
+    }
+    .akfitext{
+        margin-top: 0px !important;
+        font-size: 8px;
+    }
+    .featured{
+        font-size: 14px;
+    }
+  }

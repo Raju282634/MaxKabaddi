@@ -1,0 +1,71 @@
+.curtain-spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  
+  .curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      #b30000 0%,
+      #800000 4%,
+      #b30000 8%,
+      #800000 12%
+    );
+    background-size: 100% 100%;
+    animation: openCurtain 10s ease-in-out forwards;
+    z-index: 1;
+    transition: width 1s ease-in-out;
+  }
+    
+   .curtain.left {
+    left: 0;
+    border-right: 5px solid #400000;
+    box-shadow: inset -20px 0 30px rgba(0, 0, 0, 0.7);
+  }
+  
+  .curtain.right {
+    right: 0;
+    border-left: 5px solid #400000;
+    box-shadow: inset 20px 0 30px rgba(0, 0, 0, 0.7);
+  }
+  
+  .spinner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: gold;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Georgia', serif;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes openCurtain {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
