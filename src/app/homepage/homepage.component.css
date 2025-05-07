@@ -40,18 +40,25 @@ body {
         max-height : 40px !important;
         width: auto;
     }
+    .deskki{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        font-size: 26px !important;
+    }
     .amateur{
-        font-size: 14px;
+        font-size: 22px;
     }
   }
-
-  @media (min-width: 320px) and (max-width: 400px) {
+ 
+  @media (min-width: 320px) and (max-width: 425px) {
     .ashok_chakra_logo {
         max-height : 20px !important;
         width: auto;
     }
     .amateur{
         font-size: 14px;
+        display: flex;
+        justify-content: center !important;
     }
     .deskki{
         margin-top: 0px !important;
