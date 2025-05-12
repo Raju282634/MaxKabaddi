@@ -37,6 +37,10 @@ body {
 
 .deskki{
     margin-top: 70px !important;
+    font-size: 60px !important;
+}
+.akfitext{
+    font-size: 30px;
 }
 .carousel-inner img {
     height: 400px; /* Set your desired height */

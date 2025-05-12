@@ -34,7 +34,7 @@ export class CurtainSpinnerComponent implements OnInit {
           console.warn('Playback failed:', err);
         });
       }
-    }, 100); // 100ms delay is safer than 0ms
+    }, 700); // 100ms delay is safer than 0ms
     
   }  
   counterDisplay(): void{
