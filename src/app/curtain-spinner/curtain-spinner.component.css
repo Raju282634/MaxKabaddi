@@ -50,6 +50,23 @@
     animation: fadeIn 2s ease-in-out;
   }
   
+
+  .audio-play-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+
   @keyframes openCurtain {
     0% {
       width: 50%;

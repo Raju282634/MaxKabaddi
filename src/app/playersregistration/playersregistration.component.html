@@ -1,0 +1,72 @@
+<div class="container py-5">
+    <h2 class="text-center text-primary mb-4">Kabaddi Player Registration</h2>
+  
+    <form (ngSubmit)="onSubmit()" #playerForm="ngForm" class="row g-3">
+  
+      <div class="col-md-6">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" id="fullName" name="fullName" class="form-control" required [(ngModel)]="player.fullName">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input type="date" id="dob" name="dob" class="form-control" required [(ngModel)]="player.dob">
+      </div>
+  
+      <div class="col-md-6">
+        <label for="gender" class="form-label">Gender</label>
+        <select id="gender" name="gender" class="form-select" required [(ngModel)]="player.gender">
+          <option value="">Choose...</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+  
+      <div class="col-md-6">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" class="form-control" required pattern="[0-9]{10}" [(ngModel)]="player.mobile">
+      </div>
+  
+      <div class="col-12">
+        <label for="address" class="form-label">Address</label>
+        <textarea id="address" name="address" class="form-control" rows="3" required [(ngModel)]="player.address"></textarea>
+      </div>
+  
+      <div class="col-md-6">
+        <label for="state" class="form-label">State</label>
+        <select id="state" name="state" class="form-select" required [(ngModel)]="player.state" (change)="onStateChange()">
+          <option value="">Choose State...</option>
+          <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+        </select>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="district" class="form-label">District</label>
+        <select id="district" name="district" class="form-select" required [(ngModel)]="player.district">
+          <option value="">Choose District...</option>
+          <option *ngFor="let district of districts" [value]="district">{{ district }}</option>
+        </select>
+      </div>
+      
+      <div class="col-md-6">
+        <label for="position" class="form-label">Playing Position</label>
+        <select id="position" name="position" class="form-select" required [(ngModel)]="player.position">
+          <option value="">Choose...</option>
+          <option>Raider</option>
+          <option>Defender</option>
+          <option>All-rounder</option>
+        </select>
+      </div>
+  
+      <div class="col-md-6">
+        <label for="experience" class="form-label">Years of Experience</label>
+        <input type="number" id="experience" name="experience" class="form-control" min="0" required [(ngModel)]="player.experience">
+      </div>
+  
+      <div class="col-12 text-center mt-4">
+        <button type="submit" class="btn btn-primary px-4" [disabled]="!playerForm.form.valid">Register</button>
+      </div>
+    </form>
+</div>
+  
