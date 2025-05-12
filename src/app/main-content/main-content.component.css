@@ -36,16 +36,16 @@ body {
 }
 
 .deskki{
-    margin-top: 70px !important;
-    font-size: 60px !important;
+    margin-top: 50px !important;
+    font-size: 70px !important;
 }
 .akfitext{
     font-size: 30px;
 }
 .carousel-inner img {
-    height: 400px; /* Set your desired height */
-    width: 100%; /* Ensures it stretches to container width */
-    object-fit: cover; /* Crops images to fill area uniformly */
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
   }
 @media (min-width: 400px) and (max-width: 768px) {
     .ashok_chakra_logo {

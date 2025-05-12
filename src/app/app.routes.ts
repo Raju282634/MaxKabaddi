@@ -2,13 +2,11 @@ import { Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PlayersregistrationComponent } from './playersregistration/playersregistration.component';
-import { AppComponent } from './app.component';
 import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
     {
-        path: '',
-        component: MainContentComponent
+        path: '', redirectTo: '/home', pathMatch: 'full'
     },
     {
         path: 'home',
@@ -25,10 +23,6 @@ export const routes: Routes = [
     {
         path:'registration',
         component: PlayersregistrationComponent
-    },
-    {
-        path: '**',
-        redirectTo: ''
     },
     {
         path: '**',

@@ -1,9 +1,22 @@
-<app-curtain-spinner></app-curtain-spinner>
-<app-header></app-header>
-<app-navbar></app-navbar> 
-<router-outlet />
-<div class="container px-0 footer">
-  <footer style="color: white; text-align: center; background-color: #e96500;" class="footer">
-    <p class="m-0">&copy; 2025 Amateur Kabaddi Federation of India. All rights reserved.</p>
-  </footer>
+<div *ngIf="!showApp" class="curtain-spinner-overlay">
+  <div class="curtain left"></div>
+  <div class="curtain right"></div>
+  <audio #bgAudio autoplay>
+      <source src="assets/audios/kabaddi_music.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+  <div class="spinner-text">
+      <h2 style="text-align: center; margin-top: 5%; font-size: 110px; color: white;">{{counter}}</h2>
+  </div>    
+</div>
+
+<div *ngIf="showApp">
+  <app-header></app-header>
+  <app-navbar></app-navbar> 
+  <router-outlet />
+  <div class="container px-0">
+    <footer style="color: white; text-align: center; background-color: #e96500;" class="footer">
+      <p class="m-0">&copy; 2025 Amateur Kabaddi Federation of India. All rights reserved.</p>
+    </footer>
+  </div>
 </div>
