@@ -33,30 +33,3 @@ export const routes: Routes = [
         redirectTo: ''
     }
 ];
-
-
-export const routes2: Routes = [
-    {
-        path: '', redirectTo: '/home', pathMatch: 'full'
-    },
-    {
-        path: 'home',
-        component: MainContentComponent
-    },
-    {
-        path:'aboutus',
-        component: AboutusComponent
-    },
-    {
-        path:'contactus',
-        component: ContactusComponent
-    },
-    {
-        path:'registration',
-        component: PlayersregistrationComponent
-    },
-    {
-        path: '**',
-        redirectTo: ''
-    }
-];
